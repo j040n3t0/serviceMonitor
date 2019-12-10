@@ -13,6 +13,7 @@ def index():
   test = output.split("\n")
   test = test[2].split(" ")
   message = test[4] + " " + test[5]
+  message = message.upper()
   print message
   
   return render_template("index.html",teste = message)

@@ -1,4 +1,23 @@
+<html>
+<head></head>
+<body>
 <h3> Service Status Monitor </h3>
 
+STATUS SSH: <span id="returned">{{ teste }}</span>
 
-STATUS SSH: {{ teste }}
+<script script type="text/javascript">
+  (function () { 
+    valuee = document.getElementById("returned");
+    valuee2 = valuee.textContent;
+    console.log(valuee2);
+    if(valuee2 == "ACTIVE (RUNNING)"){
+      console.log("Entrou no IF")
+      document.getElementById("returned").style.backgroundColor = "LightGreen";
+    } else {
+      console.log("Entrou no ELSE")
+      document.getElementById("returned").style.backgroundColor = "LightCoral";
+    }
+  })();
+</script>
+</body>
+</html>
